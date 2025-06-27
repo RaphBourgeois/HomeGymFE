@@ -7,7 +7,7 @@ const { defineConfig } = require('@vue/cli-service')
   devServer: {
     proxy: {
       '/api': {
-        target: 'your backend url',
+        target: 'https://homegymbe.onrender.com/',
         changeOrigin: true,
         pathRewrite: { '^/api': '' }
       }
