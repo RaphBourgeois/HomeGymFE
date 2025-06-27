@@ -8,7 +8,7 @@ import router from './router';
 const app = createApp(App);
 
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = 'https://homegymbe.onrender.com:8080';  // the FastAPI backend
+axios.defaults.baseURL = 'https://homegymbe.onrender.com:5000';  // the FastAPI backend
 
 app.use(router);
 app.mount("#app");
