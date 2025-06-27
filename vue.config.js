@@ -5,13 +5,16 @@ const { defineConfig } = require('@vue/cli-service')
     
     module.exports ={
         transpileDependencies: true,
-        devServer: {
-            allowedHosts: [
-                '100.100.213.115',
-                '.ts.net',
-                '.myapp.com',
-                'https://homegymfe.netlify.app/'
-            ]
+        {
+          devServer: {
+            proxy: {
+              '/api': {
+                target: 'your backend url',
+                changeOrigin: true,
+                pathRewrite: { '^/api': '' }
+              }
+            }
           }
+        }; 
 
     }
